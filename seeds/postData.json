@@ -1,0 +1,13 @@
+
+[
+  {
+    "postTitle": "Hello",
+    "content": "Nice day",
+    "user_id": 1
+  },
+  {
+    "postTitle": "Next post",
+    "content": "Lalala",
+    "user_id": 2
+  }
+]

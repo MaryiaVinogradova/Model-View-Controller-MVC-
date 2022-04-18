@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <meta name = "author" content = "MV">
+  <title>Blog</title>
+  <link href ="/images/favicon.ico" rel="shortcut icon">
+  <link href ="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel = "stylesheet">
+  <link rel = "stylesheet" href = "/css/style.css">
+</head>
+
+<body class = "flex-column min-100-vh">
+  <nav class = "navbar">
+    <ul>
+      <li class = "li-inline nav-item"><a href="/">Home</a></li>
+      <li class = "li-inline nav-item"><a href = "/profile">Dashboard</a></li>
+      
+      {{#unless logged_in}}
+      <li class = "li-inline nav-item"><a href = "/login" id = "login-link">Login</a></li>
+      {{/unless}}
+      {{#if logged_in}}
+
+      <li class = "li-inline nav-item"><button class = "no-button" id = "logout-link">Logout</button></li>
+      {{/if}}
+    </ul>
+  </nav>
+
+  <header>
+    <h1 class = "title-sub"><a href = "/">Blog</a></h1>
+  </header>
+
+  <div>
+  <main>
+    {{{body}}}
+  </main>
+  </div>
+
+  {{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
+
+</body>
+
+</html>
+

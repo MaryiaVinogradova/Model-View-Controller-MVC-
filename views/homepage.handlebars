@@ -1,0 +1,33 @@
+{{#each posts as |post| }}
+
+ <div>
+  <div class="flex-column">
+   <div class="card">
+    <div class="card-header  flex-row justify-space-between">
+   
+    <h2> 
+      <a href="/post/{{post
+      Id}}">
+        <div class="col-8">{{postTitle}}</div>
+      </a>
+    </h2>
+     <div class="col-3">Posted by {{post.user.name}} on {{format_date post.date_created}}
+     </div>
+     </div>  
+    <p class="card-body">
+     {{post.content}}
+    </p>
+   </div>
+  </div>
+ </div>
+{{/each}}
+ 
+
+{{#if logged_in}}
+<div id="new-post-button">
+  <br>
+  <a href="/new-post">+ New Post</a>
+  </br>
+</div>
+{{/if}} 
+
